@@ -1,0 +1,29 @@
+{
+    "Sandbox_SkillBooksWriting": "Livros de Habilidade — Escrita",
+
+    "Sandbox_SkillBooksWriting_DisableSkillBookSpawn": "Desativar spawn de livros de habilidade",
+    "Sandbox_SkillBooksWriting_DisableSkillBookSpawn_tooltip": "Livros de habilidade não aparecem mais como loot em lugar nenhum (casas, bibliotecas, lojas, veículos...).",
+
+    "Sandbox_SkillBooksWriting_SpawnRemovalScope": "Escopo da remoção do loot",
+    "Sandbox_SkillBooksWriting_SpawnRemovalScope_tooltip": "Quais livros de habilidade são removidos do loot.",
+    "Sandbox_SkillBooksWriting_SpawnRemovalScope_option1": "Todos os mods",
+    "Sandbox_SkillBooksWriting_SpawnRemovalScope_option2": "Apenas vanilla",
+
+    "Sandbox_SkillBooksWriting_AllowWritingVanillaBooks": "Permitir escrever livros vanilla",
+    "Sandbox_SkillBooksWriting_AllowWritingVanillaBooks_tooltip": "Permite que jogadores escrevam os 24 livros de habilidade vanilla a partir do próprio nível.",
+
+    "Sandbox_SkillBooksWriting_AllowWritingModdedBooks": "Permitir escrever livros de mods",
+    "Sandbox_SkillBooksWriting_AllowWritingModdedBooks_tooltip": "Permite escrever livros de habilidade adicionados por outros mods (ex.: Lifestyle: Limpeza, Música, Dança).",
+
+    "Sandbox_SkillBooksWriting_AllowPassiveSkillBooks": "Permitir livros de habilidades passivas",
+    "Sandbox_SkillBooksWriting_AllowPassiveSkillBooks_tooltip": "Cria e permite escrever livros de Força, Condicionamento, Corrida, Pés Leves, Agilidade e Furtividade. Não existem no vanilla.",
+
+    "Sandbox_SkillBooksWriting_AllowCombatSkillBooks": "Permitir livros de habilidades de combate",
+    "Sandbox_SkillBooksWriting_AllowCombatSkillBooks_tooltip": "Cria e permite escrever livros de Machado, Contundente Longo, Contundente Curto, Lâmina Curta e Lança. Não existem no vanilla.",
+
+    "Sandbox_SkillBooksWriting_BaseWriteTime": "Tempo base de escrita (tier 1)",
+    "Sandbox_SkillBooksWriting_BaseWriteTime_tooltip": "Tempo da ação (décimos de segundo) para escrever um livro tier 1. Tiers maiores escalam pelo multiplicador abaixo.",
+
+    "Sandbox_SkillBooksWriting_TierTimeMultiplier": "Multiplicador de tempo por tier",
+    "Sandbox_SkillBooksWriting_TierTimeMultiplier_tooltip": "Tempo de escrita = TempoBase * multiplicador^(tier-1)."
+}

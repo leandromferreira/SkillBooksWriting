@@ -1,0 +1,26 @@
+module SBW
+{
+    /* Step 1 of 2 (see SPEC §4.2): the only static craftRecipe in the mod.
+       Binds a blank book any survivor can make. No SkillRequired / NeedToBeLearn
+       -> available from the start. Requires a surface (AnySurfaceCraft).
+       Step 2 (choosing which skill book to write) is the EmptySkillBook
+       context menu + ISWriteSkillBook action, not a recipe. */
+    craftRecipe MakeEmptySkillBook
+    {
+        timedAction = Making,
+        time = 300,
+        Tags = AnySurfaceCraft,
+        category = SkillBooksWriting,
+        inputs
+        {
+            item 1 [Base.Notebook;Base.Journal;Base.Diary1;Base.Diary2;Base.Notepad] mode:destroy,
+            item 2 [Base.Woodglue;Base.Glue],
+            item 3 [Base.LeatherStrips;Base.LeatherStripsDirty] mode:destroy,
+            item 1 [Base.Thread;Base.Twine;Base.FishingLine;Base.PremiumFishingLine;Base.DentalFloss;Base.Thread_Sinew;Base.Thread_Aramid],
+        }
+        outputs
+        {
+            item 1 SBW.EmptySkillBook,
+        }
+    }
+}

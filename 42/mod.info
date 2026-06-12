@@ -1,0 +1,6 @@
+name=Skill Books - Writing
+id=SkillBooksWriting
+description=Removes skill books from loot and lets players write skill books from their own knowledge. Adds books for skills that have none in vanilla (Strength, Fitness, combat...). Server-friendly, multiplayer-safe.
+poster=poster.png
+category=features
+version=0.1

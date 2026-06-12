@@ -1,0 +1,8 @@
+{
+    "IGUI_CraftCategory_SkillBooksWriting": "Livros de Habilidade",
+    "IGUI_SBW_WriteSkillBook": "Escrever livro de habilidade",
+    "IGUI_SBW_WriteBook_Entry": "%1 (Vol. %2)",
+    "IGUI_SBW_NothingWritable": "Você ainda não domina nenhuma habilidade o suficiente para escrever um livro.",
+    "IGUI_SBW_NeedPen": "Você precisa de uma caneta ou lápis para escrever.",
+    "IGUI_SBW_Writing": "Escrevendo livro de %1"
+}

@@ -1,0 +1,15 @@
+module SBW
+{
+    /* Blank bound book. Has NO SkillTrained, so the boot scan never treats it
+       as a skill book (not stripped from loot, gives no read XP). It is only a
+       crafting intermediate consumed by the "write" context-menu action. */
+    item EmptySkillBook
+    {
+        DisplayCategory = SkillBook,
+        ItemType = base:literature,
+        Weight = 1.0,
+        Icon = Book8,
+        StaticModel = BookBrown,
+        WorldStaticModel = BookBrown_Ground,
+    }
+}

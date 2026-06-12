@@ -1,0 +1,71 @@
+[h1]Skill Books — Writing[/h1]
+
+[b]Skill books no longer drop as loot. Your survivors [i]write[/i] them — from what they actually know.[/b]
+
+Knowledge stops being a lucky find on a shelf and becomes something the experienced members of your community produce and pass down. Built for big dedicated / multiplayer servers: all the heavy lifting happens once at world boot, so there is [b]zero[/b] runtime loot overhead.
+
+[hr][/hr]
+[h2]What it does[/h2]
+[list]
+[*][b]No more skill-book loot[/b] — vanilla skill books stop spawning everywhere (houses, libraries, stores, vehicles, trash…).
+[*][b]Write skill books[/b] — produce a book for a skill you're good at, for others to read.
+[*][b]Books for skills that never had one[/b] — Strength, Fitness and the melee skills, enabled per category by the admin.
+[/list]
+It [b]does not[/b] change how reading a book grants XP — it uses the vanilla system untouched. It only removes the loot and adds a way to make books.
+
+[hr][/hr]
+[h2]How writing works[/h2]
+[olist]
+[*][b]Bind an Empty Skill Book[/b] — a simple craft any survivor can do from the start, on any surface. Uses a notebook/journal/diary + glue + leather strips + thread.
+[*][b]Write it[/b] — right-click the Empty Skill Book → [i]Write skill book[/i] → choose a skill → choose a volume. You need a [b]pen or pencil[/b] on you.
+[/olist]
+A skill/volume only shows up when you're skilled enough: [b]level ≥ 2 × tier[/b] (Vol. 1 needs level 2, Vol. 5 needs level 10). Writing higher volumes takes longer (configurable).
+
+[i]You write books mostly for lower-level players to read — by the time you can write Volume 1, you've already outgrown it. It's a knowledge economy, not a personal shortcut.[/i]
+
+[hr][/hr]
+[h2]Multiplayer-ready[/h2]
+[list]
+[*][b]Server-authoritative[/b] — the server validates your skill level, the writing tool and the blank book before creating anything. No client-side forging.
+[*][b]Instant sync[/b] — the written book appears immediately, no relog.
+[*][b]Performance[/b] — one item scan + one loot-table pass at boot; nothing per tick, nothing on loot rolls.
+[/list]
+
+[hr][/hr]
+[h2]Works with other mods[/h2]
+[list]
+[*][b]Writable automatically[/b] — books from mods that follow the vanilla convention (e.g. [b]Lifestyle[/b]: Cleaning / Music / Dancing, and others) can be written without any hard dependency. Toggle with [i]Allow writing modded books[/i].
+[*][b]Loot removal also covers modded books — with one limit.[/b] Modded skill books that register into the loot tables the normal (vanilla) way [b]can[/b] be stopped from spawning, together with the vanilla ones (scope [i]All[/i]). But mods that inject and re-bake their own loot a [i]different[/i] way after the distribution merge — like [b]Lifestyle[/b] — are [b]not[/b] affected: their books keep spawning. Use scope [i]Vanilla only[/i] to strip the base-game books exclusively.
+[/list]
+
+[hr][/hr]
+[h2]Sandbox options[/h2]
+[list]
+[*][b]Disable skill book spawns[/b] — turn the loot removal on/off, with an All / Vanilla-only scope.
+[*][b]Allow writing vanilla books[/b] and [b]modded books[/b] — toggle each source.
+[*][b]Passive-skill books[/b] (Strength, Fitness, Sprinting, Lightfooted, Nimble, Sneaking) — off by default.
+[*][b]Combat-skill books[/b] (Axe, Long Blunt, Short Blunt, Short Blade, Spear) — off by default.
+[*][b]Writing time[/b] — base time + per-tier multiplier.
+[/list]
+
+[hr][/hr]
+[h2]Languages[/h2]
+English and Português (Brasil).
+
+[hr][/hr]
+[i]Build 42. Safe to add mid-save: already-spawned books are not touched; only future loot stops carrying them.[/i]
+
+[hr][/hr]
+[h2]Permissions for Modders[/h2]
+
+[b]Ask for permission.[/b]
+
+This mod may [b]not[/b] be included in modpacks, collections distributed as a single download, or any form of redistribution without the express permission of the original creator. Extensions and patches are also subject to this restriction. Having received permission, credit must be given to the original creator both within the mod files and wherever the mod is published online.
+
+[hr][/hr]
+
+[h2]Copyright[/h2]
+
+[b]Copyright 2026 Leandro Ferreira.[/b] This item is not authorized for posting on Steam, except under the Steam account named leozimmelo.
+
+All rights reserved. This mod may not be reuploaded, mirrored, or included in modpacks or collections distributed as a single download without the express written permission of the original creator.

@@ -1,0 +1,8 @@
+{
+    "IGUI_CraftCategory_SkillBooksWriting": "Skill Books",
+    "IGUI_SBW_WriteSkillBook": "Write skill book",
+    "IGUI_SBW_WriteBook_Entry": "%1 (Vol. %2)",
+    "IGUI_SBW_NothingWritable": "You don't know any skill well enough to write a book yet.",
+    "IGUI_SBW_NeedPen": "You need a pen or pencil to write.",
+    "IGUI_SBW_Writing": "Writing %1 book"
+}

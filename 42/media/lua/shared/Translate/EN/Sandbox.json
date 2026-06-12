@@ -1,0 +1,29 @@
+{
+    "Sandbox_SkillBooksWriting": "Skill Books — Writing",
+
+    "Sandbox_SkillBooksWriting_DisableSkillBookSpawn": "Disable skill book spawns",
+    "Sandbox_SkillBooksWriting_DisableSkillBookSpawn_tooltip": "Skill books no longer appear as loot anywhere (houses, libraries, shops, vehicles...).",
+
+    "Sandbox_SkillBooksWriting_SpawnRemovalScope": "Loot removal scope",
+    "Sandbox_SkillBooksWriting_SpawnRemovalScope_tooltip": "Which mods' skill books are removed from loot.",
+    "Sandbox_SkillBooksWriting_SpawnRemovalScope_option1": "All mods",
+    "Sandbox_SkillBooksWriting_SpawnRemovalScope_option2": "Vanilla only",
+
+    "Sandbox_SkillBooksWriting_AllowWritingVanillaBooks": "Allow writing vanilla skill books",
+    "Sandbox_SkillBooksWriting_AllowWritingVanillaBooks_tooltip": "Let players write the 24 vanilla skill books from their own skill level.",
+
+    "Sandbox_SkillBooksWriting_AllowWritingModdedBooks": "Allow writing modded skill books",
+    "Sandbox_SkillBooksWriting_AllowWritingModdedBooks_tooltip": "Let players write skill books added by other mods (e.g. Lifestyle: Cleaning, Music, Dancing).",
+
+    "Sandbox_SkillBooksWriting_AllowPassiveSkillBooks": "Allow passive-skill books",
+    "Sandbox_SkillBooksWriting_AllowPassiveSkillBooks_tooltip": "Create and allow writing books for Strength, Fitness, Sprinting, Lightfooted, Nimble and Sneaking. These have no vanilla book.",
+
+    "Sandbox_SkillBooksWriting_AllowCombatSkillBooks": "Allow combat-skill books",
+    "Sandbox_SkillBooksWriting_AllowCombatSkillBooks_tooltip": "Create and allow writing books for Axe, Long Blunt, Short Blunt, Short Blade and Spear. These have no vanilla book.",
+
+    "Sandbox_SkillBooksWriting_BaseWriteTime": "Base writing time (tier 1)",
+    "Sandbox_SkillBooksWriting_BaseWriteTime_tooltip": "Action time (tenths of a second) for writing a tier-1 book. Higher tiers scale by the multiplier below.",
+
+    "Sandbox_SkillBooksWriting_TierTimeMultiplier": "Time multiplier per tier",
+    "Sandbox_SkillBooksWriting_TierTimeMultiplier_tooltip": "Writing time is BaseWriteTime * multiplier^(tier-1)."
+}

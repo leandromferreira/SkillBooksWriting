@@ -1,0 +1,78 @@
+VERSION = 1,
+
+option SkillBooksWriting.DisableSkillBookSpawn
+{
+    type = boolean,
+    default = true,
+    page = SkillBooksWriting,
+    translation = SkillBooksWriting_DisableSkillBookSpawn,
+    tooltip = SkillBooksWriting_DisableSkillBookSpawn_tooltip,
+}
+
+option SkillBooksWriting.SpawnRemovalScope
+{
+    type = enum,
+    numValues = 2,
+    default = 1,
+    page = SkillBooksWriting,
+    translation = SkillBooksWriting_SpawnRemovalScope,
+    tooltip = SkillBooksWriting_SpawnRemovalScope_tooltip,
+}
+
+option SkillBooksWriting.AllowWritingVanillaBooks
+{
+    type = boolean,
+    default = true,
+    page = SkillBooksWriting,
+    translation = SkillBooksWriting_AllowWritingVanillaBooks,
+    tooltip = SkillBooksWriting_AllowWritingVanillaBooks_tooltip,
+}
+
+option SkillBooksWriting.AllowWritingModdedBooks
+{
+    type = boolean,
+    default = true,
+    page = SkillBooksWriting,
+    translation = SkillBooksWriting_AllowWritingModdedBooks,
+    tooltip = SkillBooksWriting_AllowWritingModdedBooks_tooltip,
+}
+
+option SkillBooksWriting.AllowPassiveSkillBooks
+{
+    type = boolean,
+    default = false,
+    page = SkillBooksWriting,
+    translation = SkillBooksWriting_AllowPassiveSkillBooks,
+    tooltip = SkillBooksWriting_AllowPassiveSkillBooks_tooltip,
+}
+
+option SkillBooksWriting.AllowCombatSkillBooks
+{
+    type = boolean,
+    default = false,
+    page = SkillBooksWriting,
+    translation = SkillBooksWriting_AllowCombatSkillBooks,
+    tooltip = SkillBooksWriting_AllowCombatSkillBooks_tooltip,
+}
+
+option SkillBooksWriting.BaseWriteTime
+{
+    type = double,
+    default = 1200.0,
+    min = 1.0,
+    max = 100000.0,
+    page = SkillBooksWriting,
+    translation = SkillBooksWriting_BaseWriteTime,
+    tooltip = SkillBooksWriting_BaseWriteTime_tooltip,
+}
+
+option SkillBooksWriting.TierTimeMultiplier
+{
+    type = double,
+    default = 1.6,
+    min = 1.0,
+    max = 10.0,
+    page = SkillBooksWriting,
+    translation = SkillBooksWriting_TierTimeMultiplier,
+    tooltip = SkillBooksWriting_TierTimeMultiplier_tooltip,
+}
