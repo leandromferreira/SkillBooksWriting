@@ -23,6 +23,10 @@ end
 function ISWriteSkillBook:start()
     self.item:setJobType(getText("IGUI_SBW_Writing", self.perkName))
     self.item:setJobDelta(0.0)
+    -- PerformingAction=Read alone lands on the idle "reading" node (Bob_Idle, no
+    -- visible motion); ReadType=book is what selects book.xml -> Bob_IdleReadBook,
+    -- the actual holding-and-reading clip. Mirrors ISReadABook / ISWriteSomething.
+    self:setAnimVariable("ReadType", "book")
     self:setActionAnim(CharacterActionAnims.Read)
     self:setOverrideHandModels(nil, self.item)
 end
