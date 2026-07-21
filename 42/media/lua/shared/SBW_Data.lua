@@ -12,6 +12,13 @@ SBW.lootBookSet = {}       -- [shortName]   = true        (loot tables use short
 SBW.bookModule  = {}       -- [shortName]   = "Base"|...   (for SpawnRemovalScope)
 SBW.bookBySkillTier = {}   -- [skill][tier] = "Module.Item" (full type for AddItem)
 
+-- Skill-book category tag. Vanilla (and convention-following mods) put readable
+-- skill books AND the "slipcase" set items in this DisplayCategory. The set items
+-- (BookCarpentrySet, ...) unpack into the 5 volumes and DO spawn in loot, but they
+-- carry NO SkillTrained, so a SkillTrained-only scan misses them and they keep
+-- spawning. We treat any SkillBook-category item as removable loot.
+local SKILLBOOK_CATEGORY = "SkillBook"
+
 -- vanilla tiers are LvlSkillTrained 1,3,5,7,9 -> tier 1..5
 local function tierFromLvl(lvl)
     if lvl and lvl >= 1 then return math.floor((lvl + 1) / 2) end
@@ -24,10 +31,16 @@ function SBW.scanItems()
     for i = 0, items:size() - 1 do
         local item = items:get(i)
         local skill = item:getSkillTrained()
-        if skill and skill ~= "" then
+        local hasSkill = skill and skill ~= ""
+        -- Removable from loot if it's a real skill book (SkillTrained) OR a
+        -- SkillBook-category item without a skill (the slipcase "set" items).
+        if hasSkill or item:getDisplayCategory() == SKILLBOOK_CATEGORY then
             local short = item:getName()
             SBW.lootBookSet[short] = true
             SBW.bookModule[short] = item:getModuleName()
+        end
+        -- Only real skill books (skill + tier) feed the write menu.
+        if hasSkill then
             local tier = tierFromLvl(item:getLevelSkillTrained())
             if tier then
                 SBW.bookBySkillTier[skill] = SBW.bookBySkillTier[skill] or {}

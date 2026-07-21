@@ -1,0 +1,84 @@
+[h1]Help translate Skill Books – Writing[/h1]
+
+I'd love this mod to be playable in as many languages as possible, and that's something [b]anyone can help with[/b] — you don't need to code or use the modding tools. If you can read English and write your own language, you can translate the mod. It's only a few dozen short lines of text.
+
+[b]Currently available:[/b] English (EN), Brazilian Portuguese (PTBR).
+Everything else is up for grabs.
+
+[hr][/hr]
+[h1]What you'd be translating[/h1]
+
+All the text lives in four small files inside:
+[code]media/lua/shared/Translate/EN/[/code]
+
+You can view/copy the English source of each file here:
+[list]
+[*][b]IG_UI.json[/b] — menu labels and messages ("Write skill book", tooltips, etc.) — [url=https://pastebin.com/9VpYGAZ3]https://pastebin.com/9VpYGAZ3[/url]
+[*][b]ItemName.json[/b] — the names of the books (Strength I–V, Axe I–V, and so on) — [url=https://pastebin.com/kxUi1KSb]https://pastebin.com/kxUi1KSb[/url]
+[*][b]Recipes.json[/b] — the crafting recipe name ("Bind an Empty Skill Book") — [url=https://pastebin.com/quQd8BcF]https://pastebin.com/quQd8BcF[/url]
+[*][b]Sandbox.json[/b] — the sandbox / server settings and their tooltips — [url=https://pastebin.com/G4GQq3Px]https://pastebin.com/G4GQq3Px[/url]
+[/list]
+
+Together it's roughly 90 short strings, most of them one line.
+
+[hr][/hr]
+[h1]How to help[/h1]
+
+[olist]
+[*]Copy the four English files from the links above (or grab them from the [b]EN[/b] folder in the mod).
+[*]Make a new folder named after your language code (see the list below) and put copies of the four files in it — e.g. [b]FR[/b], [b]DE[/b], [b]ES[/b], [b]RU[/b]...
+[*]Translate [b]only the text on the right-hand side[/b] of each line. Leave everything else exactly as it is.
+[*]Send it back to me (see "Sending your translation" below).
+[/olist]
+
+Example — only the part in quotes on the right changes:
+[code]
+"IGUI_SBW_WriteSkillBook": "Write skill book"      <- English
+"IGUI_SBW_WriteSkillBook": "Écrire un manuel"      <- your translation
+[/code]
+
+[hr][/hr]
+[h1]A few important rules[/h1]
+
+[list]
+[*][b]Never change the keys[/b] (the part on the left, like [i]IGUI_SBW_WriteSkillBook[/i]). Only change the text inside the quotes on the right.
+[*][b]Keep the placeholders[/b] such as [b]%1[/b] and [b]%2[/b] — the game replaces them with names/numbers at runtime. You can move them around to fit your grammar, just don't delete them. Example: [i]"Writing %1 book"[/i] → [i]"Escrevendo livro de %1"[/i].
+[*][b]Keep the quotes and commas[/b] intact. The files are JSON, so a missing quote or comma will break loading. If in doubt, paste your file into an online JSON validator before sending.
+[*][b]Save as UTF-8[/b] so accented characters and non-Latin scripts show correctly.
+[*]You [b]don't have to translate everything[/b] — a partial translation is very welcome, and I'll leave the rest in English.
+[/list]
+
+[hr][/hr]
+[h1]Language codes[/h1]
+
+Use the same folder codes Project Zomboid uses. The most common ones:
+[code]
+AR  Arabic        DE  German       KO  Korean       PT  Portuguese (PT)
+CA  Catalan       ES  Spanish      NL  Dutch        RO  Romanian
+CN  Chinese (S)   FI  Finnish      NO  Norwegian    RU  Russian
+CH  Chinese (T)   FR  French       PH  Filipino     TH  Thai
+CS  Czech         HU  Hungarian    PL  Polish       TR  Turkish
+DA  Danish        IT  Italian      PTBR Portuguese  UA  Ukrainian
+JP  Japanese                            (Brazil)
+[/code]
+If your language isn't listed, tell me and I'll find the correct code.
+
+[hr][/hr]
+[h1]Testing it in-game (optional)[/h1]
+
+If you have the mod installed, you can drop your new folder into the mod's Translate directory, set that language in the game's options, and load a save to see your text live. Reporting anything that looks off is a big help.
+
+[hr][/hr]
+[h1]Sending your translation[/h1]
+
+Whatever is easiest for you:
+[list]
+[*][b]Best:[/b] open a Pull Request on GitHub (link below).
+[*]Post the translated lines right here in this thread.
+[*]Message me and I'll take it however you can send it.
+[/list]
+
+[hr][/hr]
+[h1]Credit[/h1]
+
+Every translator is credited by name (or by whatever alias you prefer) in the mod description, unless you'd rather stay anonymous. Thank you for helping more people enjoy the mod in their own language! :steamhappy:
