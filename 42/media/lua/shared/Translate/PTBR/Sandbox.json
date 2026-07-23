@@ -4,6 +4,9 @@
     "Sandbox_SkillBooksWriting_DisableSkillBookSpawn": "Desativar spawn de livros de habilidade",
     "Sandbox_SkillBooksWriting_DisableSkillBookSpawn_tooltip": "Livros de habilidade não aparecem mais como loot em lugar nenhum (casas, bibliotecas, lojas, veículos...).",
 
+    "Sandbox_SkillBooksWriting_RemoveForageableSkillBooks": "Remover livros forrageáveis",
+    "Sandbox_SkillBooksWriting_RemoveForageableSkillBooks_tooltip": "Remove os livros de habilidade do sistema de forrageamento, para que não sejam encontrados vasculhando o chão (floresta, fazenda, cidade...). Independente da opção de loot acima.",
+
     "Sandbox_SkillBooksWriting_SpawnRemovalScope": "Escopo da remoção do loot",
     "Sandbox_SkillBooksWriting_SpawnRemovalScope_tooltip": "Quais livros de habilidade são removidos do loot.",
     "Sandbox_SkillBooksWriting_SpawnRemovalScope_option1": "Todos os mods",

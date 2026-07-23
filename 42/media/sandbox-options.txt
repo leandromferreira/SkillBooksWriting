@@ -9,6 +9,15 @@ option SkillBooksWriting.DisableSkillBookSpawn
     tooltip = SkillBooksWriting_DisableSkillBookSpawn_tooltip,
 }
 
+option SkillBooksWriting.RemoveForageableSkillBooks
+{
+    type = boolean,
+    default = true,
+    page = SkillBooksWriting,
+    translation = SkillBooksWriting_RemoveForageableSkillBooks,
+    tooltip = SkillBooksWriting_RemoveForageableSkillBooks_tooltip,
+}
+
 option SkillBooksWriting.SpawnRemovalScope
 {
     type = enum,

@@ -10,44 +10,38 @@ require "SBW_Data"
 -- Walk any distribution table, deleting (itemName, weight) pairs from every
 -- `.items` array whose name is a removable skill book. Covers ProceduralDistributions,
 -- SuburbsDistributions and VehicleDistributions in one shape-agnostic pass.
-local function stripTable(t, removable, seen)
-    if type(t) ~= "table" or seen[t] then return end
+-- Returns the number of (name, weight) pairs removed (for the boot log).
+local function stripTable(t, seen)
+    if type(t) ~= "table" or seen[t] then return 0 end
     seen[t] = true
+    local removed = 0
     local items = rawget(t, "items")
     if type(items) == "table" then
         for i = #items - 1, 1, -2 do          -- i = item name, i+1 = weight
-            if type(items[i]) == "string" and removable(items[i]) then
+            if type(items[i]) == "string" and SBW.isRemovableBook(items[i]) then
                 table.remove(items, i + 1)
                 table.remove(items, i)
+                removed = removed + 1
             end
         end
     end
     for _, v in pairs(t) do
-        if type(v) == "table" then stripTable(v, removable, seen) end
+        if type(v) == "table" then removed = removed + stripTable(v, seen) end
     end
+    return removed
 end
 
 local function stripSkillBooks()
-    local sv = SandboxVars and SandboxVars.SkillBooksWriting
-    if sv and sv.DisableSkillBookSpawn == false then return end
+    if not SBW.lootRemovalEnabled() then return end
     SBW.ensureScanned()
 
-    local vanillaOnly = sv and sv.SpawnRemovalScope == 2   -- 1=All, 2=VanillaOnly
-    local function removable(name)
-        -- Distribution entries may be a short name ("BookCarpentry1", vanilla) or a
-        -- full type ("Lifestyle.BookMusic1", some mods). Normalise to the short name.
-        local short = name:match("([^.]+)$") or name
-        if not SBW.lootBookSet[short] then return false end
-        if vanillaOnly and SBW.bookModule[short] ~= "Base" then return false end
-        return true
-    end
-
-    local seen = {}
+    local seen, removed = {}, 0
     if ProceduralDistributions and ProceduralDistributions.list then
-        stripTable(ProceduralDistributions.list, removable, seen)
+        removed = removed + stripTable(ProceduralDistributions.list, seen)
     end
-    if SuburbsDistributions then stripTable(SuburbsDistributions, removable, seen) end
-    if VehicleDistributions then stripTable(VehicleDistributions, removable, seen) end
+    if SuburbsDistributions then removed = removed + stripTable(SuburbsDistributions, seen) end
+    if VehicleDistributions then removed = removed + stripTable(VehicleDistributions, seen) end
+    print(string.format("[SBW] loot strip: removed %d skill-book entries from distribution tables", removed))
 end
 
 -- Single pass at the distribution merge. This catches vanilla skill books (and any

@@ -4,6 +4,9 @@
     "Sandbox_SkillBooksWriting_DisableSkillBookSpawn": "Disable skill book spawns",
     "Sandbox_SkillBooksWriting_DisableSkillBookSpawn_tooltip": "Skill books no longer appear as loot anywhere (houses, libraries, shops, vehicles...).",
 
+    "Sandbox_SkillBooksWriting_RemoveForageableSkillBooks": "Remove foraged skill books",
+    "Sandbox_SkillBooksWriting_RemoveForageableSkillBooks_tooltip": "Removes skill books from the foraging system, so they can't be found by searching the ground (forest, farmland, town...). Independent of the loot option above.",
+
     "Sandbox_SkillBooksWriting_SpawnRemovalScope": "Loot removal scope",
     "Sandbox_SkillBooksWriting_SpawnRemovalScope_tooltip": "Which mods' skill books are removed from loot.",
     "Sandbox_SkillBooksWriting_SpawnRemovalScope_option1": "All mods",
